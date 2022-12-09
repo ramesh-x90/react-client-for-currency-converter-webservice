@@ -1,4 +1,4 @@
-import React, { useState, ReactNode, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import Api, { CodeNamePair } from "../Api/index";
 
 interface ContextEvents {
@@ -62,13 +62,13 @@ export const CurrencyConverterContextProvider = ({ children }: Props) => {
 
   const updateResCall = async () => {
     try {
-      if (source == "" || target == "") {
+      if (source === "" || target === "") {
         setRes(0);
         return;
       }
 
       const res = await Api.convert(amount, source, target);
-      if (typeof res == "number") {
+      if (typeof res === "number") {
         setError(undefined);
         setRes(res);
         return;
@@ -90,16 +90,16 @@ export const CurrencyConverterContextProvider = ({ children }: Props) => {
       return Api.getCodeNames();
     },
     dispatch: function ({ event, data }): void {
-      if (event == "SETSRC") {
+      if (event === "SETSRC") {
         setSrc(data);
       }
-      if (event == "SETTRG") {
+      if (event === "SETTRG") {
         setTrg(data);
       }
-      if (event == "SETAMOUNT") {
+      if (event === "SETAMOUNT") {
         setAmnt(data);
       }
-      if (event == "CHANGE") {
+      if (event === "CHANGE") {
         flipExchangeCurrency();
       }
     },

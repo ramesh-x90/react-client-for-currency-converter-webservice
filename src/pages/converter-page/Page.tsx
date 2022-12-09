@@ -38,24 +38,24 @@ export function ConverterPage() {
   const ref1 = useRef<HTMLInputElement>(null);
   const ref2 = useRef<HTMLInputElement>(null);
 
-  const ff1 = useCallback((e: MouseEvent) => {
-    if (e.target != ref1.current) {
+  const hideDropDownCallBack = useCallback((e: MouseEvent) => {
+    if (e.target !== ref1.current) {
       setShowSourceDrop(false);
     }
 
-    if (e.target != ref2.current) {
+    if (e.target !== ref2.current) {
       setShowTargetDrop(false);
     }
   }, []);
 
   useEffect(() => {
-    document.addEventListener("click", ff1);
+    document.addEventListener("click", hideDropDownCallBack);
     getCodeNames().then((data) => {
       setcodenames(data);
     });
 
     return () => {
-      document.removeEventListener("click", ff1);
+      document.removeEventListener("click", hideDropDownCallBack);
     };
   }, []);
 
@@ -72,7 +72,7 @@ export function ConverterPage() {
               (it) =>
                 it.code.includes(data) ||
                 it.name.toLowerCase().includes(data.toLowerCase()) ||
-                data == ""
+                data === ""
             )
             .map((it, i) => (
               <CountryItem
@@ -158,12 +158,12 @@ export function ConverterPage() {
               }}
             />
           </div>
-          {typeof error == "undefined" ? (
+          {typeof error === "undefined" ? (
             <div className="text-center overflow-clip">
-              {amount == 0 ? "?" : amount}{" "}
-              {selectedSource == "" ? "?" : selectedSource} ={" "}
-              {result == 0 ? "?" : result}{" "}
-              {selectedtarget == "" ? "?" : selectedtarget}
+              {amount === 0 ? "?" : amount}{" "}
+              {selectedSource === "" ? "?" : selectedSource} ={" "}
+              {result === 0 ? "?" : result}{" "}
+              {selectedtarget === "" ? "?" : selectedtarget}
             </div>
           ) : (
             <div className="text-center">{error?.message}</div>
