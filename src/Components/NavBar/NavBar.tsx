@@ -8,7 +8,7 @@ export function NavBar() {
       <Navbar.Brand href="#">
         <BsCurrencyExchange className="scale-150 mx-2 text-blue-600" />
         <span className="self-center whitespace-nowrap text-xl font-bold dark:text-white">
-          Corrency Converter
+          Currency Converter
         </span>
       </Navbar.Brand>
       <div className="flex md:order-2">
