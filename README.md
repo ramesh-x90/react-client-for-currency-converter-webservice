@@ -6,7 +6,7 @@
 
 ## express REST API to consume soap service
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=ramesh-x90&repo=Express-REST-middleware-for-Currency-convertor-web-application)](https://github.com/ramesh-x90/Express-REST-middleware-for-Currency-convertor-web-application.git)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=ramesh-x90&repo=Express-REST-middleware-for-Currency-converter-web-application)](https://github.com/ramesh-x90/Express-REST-middleware-for-Currency-converter-web-application.git)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
