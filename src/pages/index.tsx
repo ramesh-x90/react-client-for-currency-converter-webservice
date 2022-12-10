@@ -1,3 +1,1 @@
-import { ConverterPage } from "./converter-page/Page";
-
-export { ConverterPage };
+export * from "./converter-page/Page";
