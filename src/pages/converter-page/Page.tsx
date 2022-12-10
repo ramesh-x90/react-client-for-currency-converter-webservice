@@ -91,7 +91,7 @@ export function ConverterPage() {
     <div className="w-full min-h-screen flex flex-col justify-center">
       <form className="flex flex-row gap-4 justify-center my-10">
         <div className="flex flex-col gap-3 p-5 border shadow-md rounded-lg w-96">
-          <div className="flex flex-row items-center justify-between gap-3">
+          <div className="flex flex-row items-center justify-between gap-5">
             <Label htmlFor="source" value="From" className="w-10" />
             <div className="relative flex-auto">
               <TextInput
@@ -123,7 +123,7 @@ export function ConverterPage() {
           >
             <CgArrowsExchangeAltV className="scale-150" />
           </button>
-          <div className="flex flex-row items-center justify-between gap-3">
+          <div className="flex flex-row items-center justify-between gap-5">
             <Label htmlFor="source" value="To" className="w-10" />
             <div className="relative flex-auto">
               <TextInput
@@ -145,7 +145,7 @@ export function ConverterPage() {
               })}
             </div>
           </div>
-          <div className="flex flex-row items-center gap-3 my-10">
+          <div className="flex flex-row items-center gap-5 my-10">
             <Label htmlFor="source" value="Amount" className="w-10" />
             <TextInput
               className="w-full max-w-md"
