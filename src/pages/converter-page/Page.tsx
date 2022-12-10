@@ -24,7 +24,7 @@ export function ConverterPage() {
   let {
     amount,
     selectedSource,
-    selectedtarget,
+    selectedTarget,
     dispatch,
     getCodeNames,
     result,
@@ -132,7 +132,7 @@ export function ConverterPage() {
                 type={"text"}
                 required={true}
                 ref={ref2}
-                value={selectedtarget}
+                value={selectedTarget}
                 onChange={(e) => {
                   dispatch({ event: "SETTRG", data: e.currentTarget.value });
                 }}
@@ -140,7 +140,7 @@ export function ConverterPage() {
                   setShowTargetDrop(true);
                 }}
               />
-              {fill(showTargetDrop, selectedtarget, (it) => {
+              {fill(showTargetDrop, selectedTarget, (it) => {
                 dispatch({ event: "SETTRG", data: it.code });
               })}
             </div>
@@ -163,7 +163,7 @@ export function ConverterPage() {
               {amount === 0 ? "?" : amount}{" "}
               {selectedSource === "" ? "?" : selectedSource} ={" "}
               {result === 0 ? "?" : result}{" "}
-              {selectedtarget === "" ? "?" : selectedtarget}
+              {selectedTarget === "" ? "?" : selectedTarget}
             </div>
           ) : (
             <div className="text-center">{error?.message}</div>

@@ -8,7 +8,7 @@ interface ContextEvents {
 
 export interface AppState {
   selectedSource: string;
-  selectedtarget: string;
+  selectedTarget: string;
   result: number;
 
   amount: number;
@@ -45,8 +45,9 @@ export const CurrencyConverterContextProvider = ({ children }: Props) => {
   };
 
   const setAmnt = (num: number) => {
-    if (num < 0) return;
-    setAmount(num);
+    const data = +num;
+    if (data < 0) return;
+    setAmount(data);
   };
 
   const flipExchangeCurrency = async () => {
@@ -79,9 +80,9 @@ export const CurrencyConverterContextProvider = ({ children }: Props) => {
     }
   };
 
-  const defaultStte: AppState = {
+  const defaultState: AppState = {
     selectedSource: source,
-    selectedtarget: target,
+    selectedTarget: target,
     amount,
     result,
     error,
@@ -106,6 +107,6 @@ export const CurrencyConverterContextProvider = ({ children }: Props) => {
   };
 
   return (
-    <appContext.Provider value={defaultStte}>{children}</appContext.Provider>
+    <appContext.Provider value={defaultState}>{children}</appContext.Provider>
   );
 };
