@@ -146,7 +146,7 @@ export function ConverterPage() {
             </div>
           </div>
           <div className="flex flex-row items-center gap-3 my-10">
-            <Label htmlFor="source" value="From" className="w-10" />
+            <Label htmlFor="source" value="Amount" className="w-10" />
             <TextInput
               className="w-full max-w-md"
               placeholder="Amount"
